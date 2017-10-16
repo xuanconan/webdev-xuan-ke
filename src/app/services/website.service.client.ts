@@ -59,7 +59,8 @@ export class WebsiteService {
 
   api = {
     'createWebsite' : this.createWebsite,
-    'findWebsitesById': this.findWebsitesById
+    'findWebsitesById': this.findWebsitesById,
+    'updateWebsites': this.updateWebsite
   };
 
 

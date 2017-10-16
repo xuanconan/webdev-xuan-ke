@@ -12,6 +12,10 @@ export class ProfileComponent implements OnInit {
 
   userId: String;
   user: User;
+  email: String;
+  firstName: String;
+  lastName: String;
+
   // inject route info in constructor
   constructor(
           private userService: UserService,
