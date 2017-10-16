@@ -15,12 +15,12 @@ export class UserService {
 
   ];
 
+
   newId(){
-    return (Math.floor(Math.random() * 10000) + 1).toString();
+    return (Number(this.users[this.users.length -1]._id) + 1).toString();
   }
   // adds the user parameter instance to the local users array
   createUser(user: any) {
-    user._id = Math.random();
     this.users.push(user);
     return user;
   }
@@ -31,6 +31,7 @@ export class UserService {
   //     return user.username === username && user.password === password;
   //   });
   // }
+
 //returns the user whose username and password match the username and password parameters
   findUserByCredentials(username, password) {
     for (let x = 0; x < this.users.length; x++) {
@@ -38,6 +39,7 @@ export class UserService {
         return this.users[x];
       }
     }
+    alert('Invalid username or password!');
   }
 
   // findUserById(userId) {

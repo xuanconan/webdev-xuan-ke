@@ -19,7 +19,7 @@
 
     <!--tick mark-->
     <div class="navbar-text pull-right">
-      <a href="profile.html" class="white">
+      <a routerLink="/profile/{{userId}}" class="white">
         <span class="glyphicon glyphicon-ok "></span>
       </a>
     </div>
@@ -32,32 +32,32 @@
   <form>
     <div class="form-group padding">
       <label for="username">Username</label>
-      <input type="text" class="form-control" id="username" placeholder="walice">
+      <input [(ngModel)] = "username" type="text" class="form-control" id="username" placeholder="{{user.username}}">
     </div>
   </form>
 
   <form>
     <div class="form-group">
       <label for="email">Email address</label>
-      <input type="email" class="form-control" id="email" placeholder="alice.wonderland@unicorn.com">
+      <input [(ngModel)] = "email" type="email" class="form-control" id="email" placeholder="{{user.firstName}}.{{user.lastName}}@unicorn.com">
     </div>
   </form>
 
   <form>
     <div class="form-group">
       <label for="first-name">First Name</label>
-      <input type="text" class="form-control" id="first-name" placeholder="Alice">
+      <input [(ngModel)] = "firstName" type="text" class="form-control" id="first-name" placeholder="{{user.firstName}}">
     </div>
   </form>
 
   <form>
     <div class="form-group">
       <label for="last-name">Last Name</label>
-      <input type="text" class="form-control" id="last-name" placeholder="Wonderland">
+      <input [(ngModel)] = "lastName" type="text" class="form-control" id="last-name" placeholder="{{user.lastName}}">
     </div>
   </form>
   <a class="btn btn-primary btn-block"
-     routerLink="profile/:uid/website">Websites</a>
+     routerLink="profile/{{userId}}/website/">Websites</a>
   <a class="btn btn-danger btn-block "
      routerLink="/login" >Logout</a>
 
@@ -67,7 +67,7 @@
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container-fluid">
     <p class="navbar-text pull-right">
-      <a routerLink="profile/:uid" class="white">
+      <a routerLink="/profile/{{userId}}" class="white">
         <span class="glyphicon glyphicon-user "></span>
       </a>
     </p>

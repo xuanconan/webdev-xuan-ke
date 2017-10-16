@@ -12,6 +12,7 @@ export class ProfileComponent implements OnInit {
 
   userId: String;
   user: User;
+  username: String;
   email: String;
   firstName: String;
   lastName: String;
@@ -19,16 +20,18 @@ export class ProfileComponent implements OnInit {
   // inject route info in constructor
   constructor(
           private userService: UserService,
-          private route: ActivatedRoute) { }
+          private activatedRouter: ActivatedRoute) { }
 
   // notify the changes of the route
   ngOnInit() {
     // invoke a function that can pass the value of the parameters
-    this.route.params.subscribe(params => {
-      this.userId = params['userId'];
+    this.activatedRouter.params.subscribe(params => {
+      this.userId = params['uid'];
       this.user = this.userService.findUserById(this.userId);
+      this.username = this.user['username'];
       // alert('userId: ' + this.userId);
     });
   }
+
 
 }
