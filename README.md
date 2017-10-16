@@ -1,22 +1,6 @@
-# AngularFourMEANSeed
+# Webdev
 
-After you clone this repository and run "npm install"
-To start the project
-Open two terminals, One to start the front end, One to start the backend
-
-~ npm start
-
-
-~ nodemon server.js
-
-Front end will run on `http://localhost:4200/`
-Server will run on port 3100. Specified in server.js and in environment.ts files
-
-
-
-
-
-
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 
 ## Development server
 
@@ -24,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 

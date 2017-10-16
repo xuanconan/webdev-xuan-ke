@@ -1,10 +1,10 @@
-import { AngularFourMEANSeedPage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('angular-four-mean-seed App', () => {
-  let page: AngularFourMEANSeedPage;
+describe('webdev App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new AngularFourMEANSeedPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
