@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../../services/user.service.client';
 import { User } from '../../../models/user.model.client';
+import { Router } from '@angular/router';
+import { WebsiteService } from '../../../services/website.service.client';
 
 @Component({
   selector: 'app-profile',

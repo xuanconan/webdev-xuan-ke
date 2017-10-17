@@ -1,13 +1,39 @@
 
 <div class="container">
 
-  <div *ngIf="errorFlag"
-       class="alert alert-danger">
-    {{errorMsg}}
-  </div>
 
   <h1>Login</h1>
 
+  <form (ngSubmit) = "login()" #f="ngForm">
+    <input ngModel
+           placeholder="username"
+           name="username"
+           class="form-control"
+           type="text"
+           required
+           #username = "ngModel"/>
+    <br/>
+
+    <input ngModel
+           placeholder="password"
+           name="password"
+           class="form-control"
+           type="password"
+           required
+           #password="ngModel"/>
+    <br/>
+
+    <button class="btn btn-primary btn-block form-control"
+            type="submit"
+            [disabled]="!f.valid"
+    >Login</button>
+    <!--(click)="login()"-->
+    <br/>
+
+    <button class="btn btn-success btn-block form-control"
+            routerLink="/register">Register</button>
+
+  </form>
   <!--<form (ngSubmit) = "login()" #f="ngForm">-->
   <!--<input placeholder="username"-->
          <!--name="username"-->
@@ -28,18 +54,18 @@
     <!--...-->
   <!--</form>-->
 
-  <input [(ngModel)] = "username"
-         placeholder="username"
-         type="text"
-         class="form-control"/>
+  <!--<input [(ngModel)] = "username"-->
+         <!--placeholder="username"-->
+         <!--type="text"-->
+         <!--class="form-control"/>-->
 
-  <input [(ngModel)]="password"
-         placeholder="password"
-         type="password"
-         class="form-control"/>
+  <!--<input [(ngModel)]="password"-->
+         <!--placeholder="password"-->
+         <!--type="password"-->
+         <!--class="form-control"/>-->
 
-  <!--invoke the funciton by clicking-->
-  <button class="btn btn-primary btn-block" (click)="login(username, password)">Login</button>
-  <button class="btn btn-success btn-block" routerLink="/register">Register</button>
+  <!--&lt;!&ndash;invoke the funciton by clicking&ndash;&gt;-->
+  <!--<button class="btn btn-primary btn-block" (click)="login(username, password)">Login</button>-->
+  <!--<button class="btn btn-success btn-block" routerLink="/register">Register</button>-->
 
 </div>
